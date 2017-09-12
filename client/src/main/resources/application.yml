@@ -1,0 +1,26 @@
+server:
+    port: 8082
+    contextPath: /client
+
+security:
+    basic:
+        enabled: false
+
+config:
+    oauth2:
+        clientID: trusted
+        clientSecret: secret
+        accessTokenUri: http://localhost:8081/oauth/token
+        userAuthorizationUri: http://localhost:8081/oauth/authorize
+        resourceURI: http://localhost:8080/
+        scope: read,write
+spring:
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html

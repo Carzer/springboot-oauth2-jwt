@@ -1,0 +1,45 @@
+server:
+    port: 8081
+
+#
+# IMPORTANT NOTICE: 
+# You have to replace this keypair and make sure the private key remains private!
+#
+
+config:
+    oauth2:
+        # openssl genrsa -out jwt.pem 2048
+        # openssl rsa -in jwt.pem
+        privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIICXAIBAAKBgQDBu/mmIt0R3OQu8+/kOi8zp3mis8rV/LLLwdE+zBtO8jW0FeLF
+            dZa+jxj9jcZnGMkN3sjUhs/dfuLA6jo62LG1I5D4t6/3E8QVLpBDvYWyQkL/3kXo
+            r23FJ3mHqTIIXUMBcu2qvUKVPB8rwE1F9OH8sSarjqfNd/WmQtGciJAaZQIDAQAB
+            AoGAPXghG/+P2S0XEXbAtM9pTqBizabyQrctG81hUOV9/KyJMZyIGVLYA5pvuXOU
+            cf3BPS9k1Vn49jReSguHckhzCZH939NICwSORGmqTAPDp9khofUgqKSDSXcbL88U
+            L7cMx3hf1X65Nr3EH7SyY94xb96wDZl7WohULkm+nXAyJzkCQQD57arRv1x2XC0l
+            fBgiNNOVwq29k+wSkwkYiyLSWkIwUAIkBApsQ5Ue0U3erIQDQ3kPvJ0X9hGyhTL2
+            5IZiNDv7AkEAxnDUl/ZJv0uUH3OvVhTenWn/2sjQjHTrv0tIhSVAVk8UOSFZOXLB
+            4aIbVDhHBWyahySeF6PFuP8Bya/JXe/VHwJAQDJ+SDZBR93Rcul3QYIUP0msWx/d
+            6b9+/KDwptusWMCUbC/lhX2uliXpPKNPnY79T7+BEqCQVyzDtItqwVrtdQJBAME6
+            Bti92kuqRV5m4Dl68tXm7FrWpbPO+et4W/JCNqaUNAX5Qg9dfgq+NcxJTGasvL+R
+            WVt9fj9IGC6SvAp7SVMCQBklsexBeiMb01xfofCmBW01uu4Gjy3v6kVpI1O03Tys
+            ePGSVC0+lWE9qQ8MjocoP4FjtikFMghn94VESVT21RM=
+            -----END RSA PRIVATE KEY-----
+
+        # openssl rsa -in jwt.pem -pubout
+        publicKey: |
+            -----BEGIN PUBLIC KEY-----
+            MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBu/mmIt0R3OQu8+/kOi8zp3mi
+            s8rV/LLLwdE+zBtO8jW0FeLFdZa+jxj9jcZnGMkN3sjUhs/dfuLA6jo62LG1I5D4
+            t6/3E8QVLpBDvYWyQkL/3kXor23FJ3mHqTIIXUMBcu2qvUKVPB8rwE1F9OH8sSar
+            jqfNd/WmQtGciJAaZQIDAQAB
+            -----END PUBLIC KEY-----
+        resourceIds: TEST-APPLICATION
+
+
+mongodb:
+  host: localhost:27017
+  name: test
+  user:
+  pwd:
