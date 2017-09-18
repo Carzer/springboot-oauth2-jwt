@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .and().logout().permitAll()//退出页面
                 .and()
-                //.csrf().disable()
+                .csrf().disable()
                 .httpBasic().disable()
                 .anonymous().disable()
                 .authorizeRequests().anyRequest().authenticated()
